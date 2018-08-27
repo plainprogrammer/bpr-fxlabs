@@ -1,0 +1,22 @@
+---
+parent: "api_business_profiles?account_id=id"
+name: "ApiBusinessProfiles?accountId=idGetAuthInvalid"
+description: null
+type: "SUITE"
+endpoint: "/api/business_profiles?account_id={{@Random}}"
+method: "GET"
+auth: "INVALID_AUTH"
+headers:
+- "Accept: application/json"
+- "Content-Type: application/json"
+testCases: []
+assertions:
+- "@StatusCode != 200"
+tags:
+- "V1"
+authors:
+- "FX Bot"
+category: "UnSecured"
+severity: "Critical"
+inactive: false
+policies: null

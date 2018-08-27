@@ -1,0 +1,23 @@
+---
+parent: "api_business_profiles_id"
+name: "ApiBusinessProfilesIdGetPathParamInvalidDatatypeId"
+description: null
+type: "SUITE"
+endpoint: "/api/business_profiles/1T6D9u"
+method: "GET"
+auth: "Default"
+headers:
+- "Accept: application/json"
+- "Content-Type: application/json"
+testCases: []
+assertions:
+- "@StatusCode != 401"
+- "@StatusCode != 404"
+tags:
+- "V1"
+authors:
+- "FX Bot"
+category: "Negative"
+severity: "Critical"
+inactive: false
+policies: null
