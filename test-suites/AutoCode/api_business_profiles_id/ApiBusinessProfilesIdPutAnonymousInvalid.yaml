@@ -1,26 +1,23 @@
 ---
-parent: "api_business_profiles?account_id=id"
-name: "ApiBusinessProfiles?accountId=idGetPathParamNullValueId"
+parent: "api_business_profiles_id"
+name: "ApiBusinessProfilesIdPutAnonymousInvalid"
 description: null
 authors:
 - "FX Bot"
 type: "SUITE"
 init: []
-endpoint: "/api/business_profiles?account_id=null"
-method: "GET"
-auth: "Default"
+endpoint: "/api/business_profiles/{{@Random}}"
+method: "PUT"
+auth: "Anonymous"
 headers:
 - "Accept: application/json"
 - "Content-Type: application/json"
 testCases: []
 assertions:
 - "@StatusCode != 200"
-- "@StatusCode != 401"
-- "@StatusCode != 404"
-- "@StatusCode != 500"
 cleanup: []
 severity: "Major"
-category: "Negative"
+category: "UnSecured"
 tags:
 - "V1"
 inactive: false
